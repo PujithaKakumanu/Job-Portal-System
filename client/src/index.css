@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth transition of theme change */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.1s;
+}
+*::selection{
+    background: rgba(186, 213, 236, 0.803);
+}
+
+body{
+    background-color: #f0f8ff;
+}
+
+@media (max-width: 640px) {
+    body {
+        @apply text-sm;
+    }
+}
+
+/* Custom-scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 3px;
+    background-color: rgba(15, 11, 11, 0.248);
+    
+}
+::-webkit-scrollbar-thumb {
+    background-color: #07285633;
+    border-radius: 10px;
+    cursor: grab;
+}
+::-webkit-scrollbar-thumb:active{
+    cursor: grabbing;
+}
+
+/* Auth Buttton */
+.auth-button{
+    @apply relative px-4 py-1 rounded-xl border border-slate-600 before:bg-slate-900/70 hover:text-white hover:shadow-[0_0_10px_gray] overflow-hidden before:absolute before:w-full before:bottom-0 before:left-0 before:z-[-99] before:h-0 hover:before:h-full before:transition-all before:duration-300 before:content-['']
+}
+
+.auth-button-dark{
+    @apply before:bg-blue-900/50
+}
+
+.auth-button-active{
+    @apply before:h-full before:text-white
+}
+
+/* Hero Card Styles */
+.hero-card{
+    @apply absolute h-[65%] backdrop-blur-lg bg-gradient-to-b max-lg:h-[90%] w-1/2 rounded-xl origin-bottom shadow-[0_0_15px_gray] flex items-center justify-center overflow-hidden;
+}
+
+/* Flip Effect */
+.flip{
+    transform : rotateY(180deg)
+}
+
+/* creating the hover effect on landing page */
+@media screen and (min-width : 720px){
+    .stroke{
+        -webkit-text-stroke-color: #000;
+        -webkit-text-stroke-width: 2px;
+        color: white;
+        font-weight: 800;
+        cursor: crosshair;
+    }
+}
+
+.overlayGif{
+    top: 0;
+    transition: all linear 0.3s ;
+}
+
+/* Hover Link Effect */
+.hover-effect{
+    @apply before:h-[3px] before:w-0 before:absolute before:bottom-0 before:left-0 before:rounded-lg before:bg-slate-900 before:shadow-[0_0_10px_gray] before:shadow-slate-900/50 before:transition-all before:duration-500 hover:before:w-full
+}
+
+.hover-effect-dark{
+    @apply before:bg-blue-800
+}
+
+/* Profile Link Heading */
+.profile-link{
+    @apply w-full px-4 py-3 my-2 border-t border-b text-2xl border-gray-600 font-bold
+}
+
+/* Post Job Button */
+.cssbuttons-io-button {
+    background: #0e0964a4;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 0.6em;
+    font-size: 17px;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #423fbb;
+    overflow: hidden;
+    position: relative;
+    /* height: 2.8em; */
+    padding-right: 3.3em;
+    cursor: pointer;
+  }
+  
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #313db7;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #351c88;
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.85);
+  }
+  
